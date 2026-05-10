@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Sandro Tilmann</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Sandro Tilmann</div>
+            <div class="menu-icon" id="menu-icon">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Sobre mim</a></li> 
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <button id="theme-toggle" title="Alternar Tema">🌓</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1>Fale Comigo</h1>
+            
+            <div class="content-section">
+                <h2>Informações de Contato</h2>
+                <p><strong>Email:</strong>sfthurmann@gmail.com</p>
+                <p><strong>Telefone/WhatsApp:</strong> (51) 99718-9368</p>
+                <p><strong>Localização:</strong> Porto Alegre - RS, Brasil</p>
+                <br>
+                <p>
+                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sandro-flores-tilmann-437601109/" target="_blank" style="color: var(--primary-color);">Visitar Perfil</a> |
+                    <strong>Facebook:</strong> <a href="https://www.facebook.com/sandro.tilmann" target="_blank" style="color: var(--primary-color);">Visitar Perfil</a>
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>Envie uma Mensagem</h2>
+                <form id="formContato">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@dominio.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Sandro Flores Tilmann. Atividade Prática UNINTER.</p>
+    </footer>
+</body>
+</html>
+

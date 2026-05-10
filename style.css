@@ -1,0 +1,233 @@
+
+
+
+:root {
+    --primary-color: #0056b3;
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --nav-bg: #1a1a2e;
+    --nav-text: #fff;
+    --card-bg: rgba(255, 255, 255, 0.95);
+}
+
+
+
+.dark-mode {
+    --primary-color: #4da3ff;
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --nav-bg: #0d0d1a;
+    --card-bg: rgba(30, 30, 30, 0.95);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+body {
+    background-color: var(--bg-color); /* Usamos a cor definida acima */
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    
+    }
+
+/* Navegação Fixa no Topo */
+header {
+    background-color: var(--nav-bg);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--nav-text);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Botões do Menu */
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--nav-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--nav-text);
+    cursor: pointer;
+}
+
+/* Conteúdo Principal */
+main {
+    margin-top: 80px; /* Compensa o menu fixo */
+    padding: 40px 5%;
+    min-height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+ul.hobbies-list, ul.skills-list {
+    list-style-position: inside;
+    margin-top: 10px;
+}
+
+/* Formulário de Contato */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+button.btn-submit {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button.btn-submit:hover {
+    opacity: 0.8;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+}
+
+/* Responsividade Mobile-First */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--nav-bg);
+        text-align: center;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 15px 0;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* --- Estilos para a Foto de Perfil na página Sobre Mim --- */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-text {
+    flex: 1; /* O texto ocupa o espaço restante */
+}
+
+.profile-image img {
+    width: 180px; /* Tamanho da foto */
+    height: auto;
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/*  dispositivos móveis (Celular) */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column-reverse; /* Coloca a foto em cima do texto no celular */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-image {
+        margin-bottom: 20px;
+    }
+}
